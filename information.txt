@@ -1,0 +1,9 @@
+EXECUTE sp_MSforeachtable @command1 = 'ALTER INDEX ALL ON ? REORGANIZE'
+go
+
+
+
+EXEC sp_MSForEachTable 'UPDATE STATISTICS ? WITH FULLSCAN;'
+go
+
+
